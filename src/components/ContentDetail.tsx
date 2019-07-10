@@ -1,7 +1,12 @@
+import PageContainer from './PageContainer';
 import * as React from "react";
 
 const ContentDetail = () => {
-	return <div>Content Detail</div>;
+	return (
+		<PageContainer>
+			<div>Content Detail</div>
+		</PageContainer>
+	);
 };
 
 export default ContentDetail;
