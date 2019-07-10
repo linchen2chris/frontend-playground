@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @material-ui/style
+  /usr/local/bin/node /usr/local/bin/yarn add -D @types/react-hook-form
 
 PATH: 
   /usr/local/opt/imagemagick@6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/clin/.yarn/bin:/Users/clin/.config/yarn/global/node_modules/.bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.npmjs.org/@material-ui%2fstyle: Not found
+  Error: https://registry.npmjs.org/@types%2freact-hook-form: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66255:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:129397:22)
       at Request.emit (events.js:182:13)
@@ -59,6 +59,7 @@ npm manifest:
       "@babel/core": "^7.5.0",
       "@babel/preset-env": "^7.5.0",
       "@babel/preset-react": "^7.0.0",
+      "@types/hookrouter": "^2.2.1",
       "@types/jest": "^24.0.15",
       "@types/node": "^12.0.12",
       "@types/react": "^16.8.23",
@@ -82,8 +83,12 @@ npm manifest:
     },
     "dependencies": {
       "@material-ui/core": "^4.2.0",
+      "@material-ui/icons": "^4.2.1",
+      "@material-ui/styles": "^4.2.0",
+      "hookrouter": "^1.2.3",
       "react": "^16.8.6",
       "react-dom": "^16.8.6",
+      "react-hook-form": "^3.18.3",
       "react-hot-loader": "^4.12.5"
     }
   }
@@ -1284,6 +1289,13 @@ Lockfile:
       react-transition-group "^4.0.0"
       warning "^4.0.1"
   
+  "@material-ui/icons@^4.2.1":
+    version "4.2.1"
+    resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.2.1.tgz#fe2f1c4f60c24256d244a69d86d0c00e8ed4037e"
+    integrity sha512-FvSD5lUBJ66frI4l4AYAPy2CH14Zs2Dgm0o3oOMr33BdQtOAjCgbdOcvPBeaD1w6OQl31uNW3CKOE8xfPNxvUQ==
+    dependencies:
+      "@babel/runtime" "^7.2.0"
+  
   "@material-ui/styles@^4.2.0":
     version "4.2.0"
     resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.2.0.tgz#dafb8a271cb6772354aece15d3e43af33844f692"
@@ -1398,6 +1410,14 @@ Lockfile:
       "@types/events" "*"
       "@types/minimatch" "*"
       "@types/node" "*"
+  
+  "@types/hookrouter@^2.2.1":
+    version "2.2.1"
+    resolved "https://registry.yarnpkg.com/@types/hookrouter/-/hookrouter-2.2.1.tgz#0c69e671957b48ade9e042612faf3fc833a3fd59"
+    integrity sha512-C4Ae6yf8vE4TEKZa0EpP2o85UMVHKsZeJwT0oWiQ1QkNBbkQ8bk5A+qWS25Uect9r1Uivz/dnSg6v4WwzFjgrg==
+    dependencies:
+      "@types/react" "*"
+      csstype "^2.2.0"
   
   "@types/istanbul-lib-coverage@*":
     version "2.0.1"
@@ -4641,6 +4661,11 @@ Lockfile:
     dependencies:
       parse-passwd "^1.0.0"
   
+  hookrouter@^1.2.3:
+    version "1.2.3"
+    resolved "https://registry.yarnpkg.com/hookrouter/-/hookrouter-1.2.3.tgz#a65599a1be376b51734caf7c4f7f8aba59bb2c77"
+    integrity sha512-n0mqEBGgXIxYRNMHlwCzoyTOk0OB5Es3jwUyA3+2l5nte/52n0CMMj1bmoCabC8K43YTUEr0zzexTBfo//tq2Q==
+  
   hosted-git-info@^2.1.4:
     version "2.7.1"
     resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
@@ -7591,6 +7616,11 @@ Lockfile:
       object-assign "^4.1.1"
       prop-types "^15.6.2"
       scheduler "^0.13.6"
+  
+  react-hook-form@^3.18.3:
+    version "3.18.3"
+    resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-3.18.3.tgz#b7be3e21c134fe3dc01004d88d24f7c28f0989d9"
+    integrity sha512-OZTIpOGTITEPTO/Cr9CWrynCzEkAoAPNmKtHJ2oBX16CmzC+dNHlI0Vx+g8L9k4QKSVE0IDV75u3umi8KFvxLA==
   
   react-hot-loader@^4.12.5:
     version "4.12.5"

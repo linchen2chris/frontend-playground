@@ -1,4 +1,4 @@
-import { purple, green } from '@material-ui/core/colors';
+import { red, purple, green } from "@material-ui/core/colors";
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core";
 import * as React from "react";
@@ -11,6 +11,7 @@ const theme = createMuiTheme({
 	palette: {
 		primary: purple,
 		secondary: green,
+		error: red,
 	},
 });
 
