@@ -1,22 +1,33 @@
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 import * as React from "react";
 import { hot } from "react-hot-loader";
 
 const reactLogo = require("./../assets/img/react_logo.svg");
 
-export interface AppProps {
-}
+export interface AppProps {}
 
-class App extends React.Component<AppProps, undefined> {
-    render() {
-        return (
-            <div>
-                <h1>Hello World!</h1>
-                <p>Foo to the barz</p>
-                <img src={reactLogo} height="480" />
-            </div>
-        );
-    }
-}
+const App = () => {
+	const classes = useStyles();
+	return (
+		<div>
+			<img src={reactLogo} height="480" />
+			<Button variant="contained" color="secondary" className={classes.button}>
+				Default
+			</Button>
+		</div>
+	);
+};
+
+const useStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		button: {
+			margin: theme.spacing(1),
+			color: "blue",
+			alignSelf: "middle",
+		},
+	}),
+);
 
 declare let module: Object;
 
