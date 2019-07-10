@@ -1,5 +1,5 @@
+import { Button, Container } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
 import * as React from "react";
 import { hot } from "react-hot-loader";
 
@@ -10,21 +10,27 @@ export interface AppProps {}
 const App = () => {
 	const classes = useStyles();
 	return (
-		<div>
-			<img src={reactLogo} height="480" />
-			<Button variant="contained" color="secondary" className={classes.button}>
-				Default
-			</Button>
-		</div>
+		<Container>
+			<Container classes={{ root: classes.container }}>
+				<img src={reactLogo} height="480" />
+			</Container>
+			<Container classes={{ root: classes.container }}>
+				<Button variant="contained" color="secondary" className={classes.button}>
+					Default
+				</Button>
+			</Container>
+		</Container>
 	);
 };
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
+		container: {
+			justifyContent: "center",
+		},
 		button: {
 			margin: theme.spacing(1),
-			color: "blue",
-			alignSelf: "middle",
+			color: "white",
 		},
 	}),
 );
