@@ -5,7 +5,6 @@ import {
 	FormControlLabel,
 	FormGroup,
 	FormLabel,
-	Input,
 	InputLabel,
 	MenuItem,
 	Radio,
@@ -13,14 +12,16 @@ import {
 	Select,
 	TextField,
 } from "@material-ui/core";
+import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import PageContainer from "./PageContainer";
 import * as React from "react";
 import useForm from "react-hook-form";
+import MomentUtils from "@date-io/moment";
 
 const ContentDetail = () => {
 	const { register, setValue, handleSubmit, errors } = useForm(); // initialise the hook
 	const [age, setAge] = React.useState("");
-	/* 	const [dob, setDob] = React.useState(""); */
+	const [dob, setDob] = React.useState(new Date());
 	const onSubmit = data => {
 		console.log(data);
 	};
@@ -35,10 +36,10 @@ const ContentDetail = () => {
 		setAge(value);
 	};
 
-	/* const handleChooseDate = date => {
-		 setValue("dob", value);
-		 setDob(value);
-	   }; */
+	const handleDateChange = date => {
+		setValue("dob", date.toString());
+		setDob(date.toString());
+	};
 
 	return (
 		<PageContainer>
@@ -64,6 +65,12 @@ const ContentDetail = () => {
 						<MenuItem value={20}>Twenty</MenuItem>
 						<MenuItem value={30}>Thirty</MenuItem>
 					</Select>
+				</FormControl>
+
+				<FormControl fullWidth>
+					<MuiPickersUtilsProvider utils={MomentUtils}>
+						<DatePicker label="date of birth" value={dob} onChange={handleDateChange} />
+					</MuiPickersUtilsProvider>
 				</FormControl>
 
 				<FormControl fullWidth component="fieldset">
