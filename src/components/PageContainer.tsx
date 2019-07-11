@@ -25,7 +25,7 @@ const PageContainer = (props: PageContainerProps) => {
 	const classes = useStyles();
 	const [selectedIndex, setSelectedIndex] = React.useState(0);
 
-	function handleListItemClick(index: number): void {
+	const handleListItemClick = (index: number): void => {
 		if (index === 0) {
 			navigate("/");
 		} else if (index === 1) {
@@ -34,7 +34,7 @@ const PageContainer = (props: PageContainerProps) => {
 			navigate("/about");
 		}
 		setSelectedIndex(index);
-	}
+	};
 	return (
 		<Container>
 			<AppBar position="fixed" className={classes.appBar}>
