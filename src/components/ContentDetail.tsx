@@ -84,8 +84,8 @@ const ContentDetail = () => {
 				<FormControl fullWidth component="fieldset">
 					<FormLabel component="legend">Favoriate Color</FormLabel>
 					<FormGroup row>
-						<FormControlLabel control={<Checkbox name="gray" inputRef={register} value={true} />} label="Gray" />
-						<FormControlLabel control={<Checkbox name="red" inputRef={register} value={true} />} label="Red" />
+						<FormControlLabel control={<Checkbox name="color[0]" inputRef={register} value={"gray"} />} label="Gray" />
+						<FormControlLabel control={<Checkbox name="color[1]" inputRef={register} value={"red"} />} label="Red" />
 					</FormGroup>
 				</FormControl>
 				<Button type="submit" variant="contained">
