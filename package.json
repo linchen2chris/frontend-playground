@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-typescript-starter",
+  "name": "react-webpack-typescript-playground",
   "version": "0.1.0",
   "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
   "keywords": [
@@ -10,11 +10,11 @@
     "hmr",
     "boilerplate"
   ],
-  "author": "Viktor Persson",
+  "author": "Lin Chen",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": "git+git@github.com:linchen2chris/frontend-playground.git"
   },
   "scripts": {
     "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
@@ -58,6 +58,7 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/pickers": "^3.1.2",
     "@material-ui/styles": "^4.2.0",
+    "formik": "jaredpalmer/formik",
     "hookrouter": "^1.2.3",
     "moment": "^2.24.0",
     "react": "^16.8.6",

@@ -27,6 +27,7 @@ const ContentDetail = () => {
 	};
 
 	React.useEffect(() => {
+    register({name:})
 		register({ name: "age" });
 		register({ name: "dob" });
 	}, []);
@@ -45,7 +46,7 @@ const ContentDetail = () => {
 		<PageContainer>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<FormControl fullWidth component="fieldset">
-					<TextField fullWidth name="firstName" label="First Name" id="firstName" inputRef={register} />
+					<TextField fullWidth name="firstName" label="First Name" id="firstName" />
 				</FormControl>
 				<FormControl fullWidth component="fieldset">
 					<TextField
