@@ -27,7 +27,6 @@ const ContentDetail = () => {
 	};
 
 	React.useEffect(() => {
-    register({name:})
 		register({ name: "age" });
 		register({ name: "dob" });
 	}, []);
